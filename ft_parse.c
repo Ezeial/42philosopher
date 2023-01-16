@@ -11,6 +11,8 @@ static int ft_will_exceed(unsigned long current_nb, int next_digit)
 
 static int ft_parse_int(char *str, int *nb)
 {
+    if (!str[0])
+        return (-1);
     *nb = 0;
     while (*str)
     {

@@ -7,6 +7,13 @@ int    ft_eat(t_philo *philo)
     next_philo_idx = philo->nb % philo->table->input_data.nb_of_philos;
     pthread_mutex_lock(&(philo->fork));
     ft_print(philo, TAKING);
+    if (philo->table->input_data.nb_of_philos == 1)
+    {
+        while (ft_check_stop(philo) == 0)
+        {
+        }
+        return (-1);
+    }
     pthread_mutex_lock(&(philo->table->philos[next_philo_idx].fork));
     ft_print(philo, TAKING);
     ft_print(philo, EATING);

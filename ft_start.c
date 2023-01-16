@@ -4,6 +4,8 @@ int	ft_start(t_table *table)
 {
 	int	i;
 
+	if (table->input_data.must_eat == 0)
+		return (0);
 	i = 0;
 	while (i < table->input_data.nb_of_philos)
 	{
