@@ -1,0 +1,5 @@
+[ ] gerer le 1 0 philo
+[ ] faire la fin quand ils ont tous manger assez
+[ ] mettre un time start par philo ?
+[ ] test 310 200 100 sur les autres
+[ ] verifier lemplacement du lastmeal
