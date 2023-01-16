@@ -40,5 +40,9 @@ int ft_parse(int ac, char **av, t_input_data *input_data)
         return (-1);
     if (ac == 6 && (ft_parse_int(av[5], &(input_data->must_eat)) < 0))
         return (-1);
+    if (input_data->time_to_eat > input_data->time_to_die)
+        input_data->time_to_eat = input_data->time_to_die;
+    if (input_data->time_to_sleep > input_data->time_to_die)
+        input_data->time_to_sleep = input_data->time_to_die;
     return (0);
 }

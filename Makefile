@@ -10,7 +10,7 @@ SRCS		=	main.c ft_parse.c ft_init.c ft_start.c ft_philo.c ft_watch_philo.c ft_de
 
 CC				=	gcc
 RM				=	rm -rf
-CFLAGS			=	-Wall -Wextra -Werror -fsanitize=address -g
+CFLAGS			=	-Wall -Wextra -Werror
 
 HEADERS			=	philosophers.h
 
