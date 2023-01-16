@@ -54,9 +54,5 @@ int     ft_check_stop(t_philo *philo)
     pthread_mutex_lock(&(philo->table->death_mutex));
     ret = philo->table->is_dead;
     pthread_mutex_unlock(&(philo->table->death_mutex));
-    if (philo->table->input_data.must_eat >= 0)
-    {
-        ret |= philo->has_eaten == philo->table->input_data.must_eat;
-    }
     return (ret);
 }

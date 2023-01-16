@@ -1,6 +1,6 @@
 #include "philosophers.h"
 
-void    ft_eat(t_philo *philo)
+int    ft_eat(t_philo *philo)
 {
     int next_philo_idx;
 
@@ -22,7 +22,9 @@ void    ft_eat(t_philo *philo)
         pthread_mutex_lock(&(philo->table->satiated_mutex));
         philo->table->satiated_philos += 1;
         pthread_mutex_unlock(&(philo->table->satiated_mutex));
+        return (-1);
     }
+    return (0);
 }
 
 void	*ft_philo(void *p)
@@ -41,8 +43,9 @@ void	*ft_philo(void *p)
             ft_print(philo, THINKING);
         }
         if (ft_check_stop(philo) > 0)
-            break ;         
-        ft_eat(philo);
+            break ; 
+        if (ft_eat(philo) < 0)
+            break ;
         if (philo->nb % 2 != 0)
         {   
             if (ft_check_stop(philo) > 0)
