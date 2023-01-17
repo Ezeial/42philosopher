@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_start.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: egiraldi <egiraldi@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/17 17:28:49 by egiraldi          #+#    #+#             */
+/*   Updated: 2023/01/17 17:29:01 by egiraldi         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philosophers.h"
 
 int	ft_start(t_table *table)
@@ -14,7 +26,7 @@ int	ft_start(t_table *table)
 			return (-1);
 		i++;
 	}
-    ft_watch_philo(table);
+	ft_watch_philo(table);
 	i = 0;
 	while (i < table->input_data.nb_of_philos)
 	{
